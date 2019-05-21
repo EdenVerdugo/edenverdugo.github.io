@@ -1,3 +1,23 @@
 .logo {
     height: 28px;
 }
+
+.delay-500ms {
+    animation-delay: 500ms;
+    animation-duration: 600ms;
+}
+
+.delay-300ms {
+    animation-delay: 300ms;
+    animation-duration: 350ms;
+}
+
+.delay-200ms {
+    animation-delay: 200ms;
+    animation-duration: 250ms;
+}
+
+.delay-100ms {
+    animation-delay: 100ms;
+    animation-duration: 150ms;
+}

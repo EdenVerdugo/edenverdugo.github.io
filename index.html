@@ -8,36 +8,120 @@
     <title>Eden Rodrigo Verdugo Garcia | Portafolio CV</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+    <link rel="stylesheet" href="asset/css/bulma-helpers.min.css">
     <link rel="stylesheet" href="asset/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 </head>
 
 <body>
-    <section class="hero is-primary is-medium">
+    <section class="hero is-light is-medium" id="app">
         <div class="hero-head">
-            <header class="nav">
+            <header class="navbar">
                 <div class="container">
-                    <div class="nav-left">
-                        <a href="#" class="nav-item">
-                            <img src="asset/img/logo.png" alt="@EdenVerdugo" class="logo">
+                    <div class="navbar-brand">
+                        <a href="#" class="navbar-item">
+                            <img src="https://bulma.io/images/bulma-logo.png" alt="@EdenVerdugo" class="logo">
                         </a>
                     </div>
-                    <div class="nav-right nav-menu">
-                        <a href="https://github.com/EdenVerdugo" target="_blank" class="nav-item">Github</a>
-                        <a href="https://twitter.com/EdenVerdugo" target="_blank" class="nav-item">Twitter</a>
-                        <a href="https://instagram.com/EdenVerdugo" target="_blank" class="nav-item">Instagram</a>
-                        <a href="https://facebook.com/EdenVerdugo" target="_blank" class="nav-item">Facebook</a>
-                        <span class="nav-item">
-                            <a href="http://youtube.com/edenverdugo" target="_blank"
-                                class="button is-primary is-inverted">
-                                <span class="icon"><i class="fa fa-youtube"></i></span>
-                                <span>YouTube</span>
+                    <div class="navbar-menu">
+                        <div class="navbar-end">
+                            <a href="https://twitter.com/EdenVerdugo" target="_blank" class="navbar-item">
+                                <span class="icon"> <i class="fab fa-twitter"></i></span>
+                                <span>Twitter</span>
                             </a>
-                        </span>
+                            <a href="https://facebook.com/EdenVerdugo" target="_blank" class="navbar-item">
+                                <span class="icon"> <i class="fab fa-facebook"></i></span>
+                                <span>Facebook</span>
+                            </a>
+                            <span class="navbar-item">
+                                <a href="https://github.com/EdenVerdugo" target="_blank"
+                                    class="button is-link is-inverted">
+                                    <span class="icon"> <i class="fab fa-github"></i></span>
+                                    <span>Github</span>
+                                </a>
+                            </span>
+                        </div>
                     </div>
                 </div>
             </header>
         </div>
+
+        <div class="hero-body">
+            <div class="container">
+                <h1
+                    class="title has-text-centered has-text-weight-bold has-margin-bottom-100 animated fadeInUp delay-100ms">
+                    <span class="icon"> <i class="fa fa-user-tie"></i></span>
+                    <span>Contacto</span>
+                </h1>
+                <div class="columns">
+                    <div class="column">
+                        <figure class="image">
+                            <img :src="yo.foto" alt="cage" class=" animated fadeInLeft delay-100ms">
+                        </figure>
+
+                    </div>
+                    <div class="column has-text-left animated fadeInRight delay-100ms">
+                        <section class="subtitle section">
+                            <div class="container">
+                                <h2 class="title ">
+                                    {{ yo.nombre }}
+                                </h2>
+
+                                <article>
+                                    <span class="icon"> <i class="fa fa-envelope"></i> </span>
+                                    <a :href="mailTo">
+                                        {{ yo.correo }}
+                                    </a>
+                                </article>
+
+                                <article>
+                                    <span class="icon"> <i class="fa fa-phone-square"></i> </span>
+                                    <a :href="cel">
+                                        {{ yo.celular }}
+                                    </a>
+                                </article>
+
+                                <article>
+                                    <span class="icon"> <i class="fa fa-id-card"></i> </span>
+                                    <a :href="linkCedula">
+                                        {{ yo.cedulaProfesional }}
+                                    </a>
+                                </article>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+
+            </div>
+        </div>
     </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js"></script>
+    <script>
+        const app = new Vue({
+            el: '#app',
+            data: {
+                yo: {
+                    nombre: 'Eden Rodrigo Verdugo Garcia',
+                    correo: 'eden.verdugo@gmail.com',
+                    celular: '667 215 6054',
+                    cedulaProfesional: '7006956',
+                    foto: 'asset/img/cage2.jpg'
+                }
+            },
+            computed: {
+                mailTo: function () {
+                    return 'mailto:' + this.yo.correo
+                },
+                cel: function () {
+                    return 'cel:' + this.yo.celular
+                },
+                linkCedula: function () {
+                    return 'https://www.cedulaprofesional.sep.gob.mx/cedula/presidencia/indexAvanzada.action'
+                }
+            }
+        })
+    </script>
 </body>
 
 </html>
