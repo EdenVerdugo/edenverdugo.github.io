@@ -105,7 +105,8 @@
                     Formacion académica
                 </h2>
                 <article>
-                    <div v-for="escuela in yo.formacionAcademica" class="has-margin-100 is-size-4" data-aos="fade-left">
+                    <div v-for="escuela in yo.formacionAcademica" class="has-margin-top-100 is-size-4"
+                        data-aos="fade-left">
                         <div class="is-bold">{{ escuela.nombre }}</div>
                         <div class="is-italic is-size-5">{{ escuela.fechas}}</div>
                     </div>
@@ -120,7 +121,7 @@
                     Experiencia profesional
                 </h2>
                 <article>
-                    <div v-for="trabajo in yo.experienciaProfesional" class="has-margin-100 is-size-4"
+                    <div v-for="trabajo in yo.experienciaProfesional" class="has-margin-top-100 is-size-4"
                         data-aos="flip-left">
                         <div class="is-bold">{{ trabajo.nombre }}</div>
                         <div class="is-italic is-size-5">{{ trabajo.fechas}}</div>
@@ -136,7 +137,8 @@
                     Habilidades
                 </h2>
                 <div>
-                    <div v-for="habilidad in yo.habilidades" class="has-margin-100 is-size-4" data-aos="zoom-in-down">
+                    <div v-for="habilidad in yo.habilidades" class="has-margin-top-100 is-size-4"
+                        data-aos="zoom-in-down">
                         <div>{{ habilidad.descripcion }}</div>
 
                         <ul v-for="icono in habilidad.iconos" style="display: inline-block">
