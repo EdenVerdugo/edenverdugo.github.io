@@ -11,7 +11,7 @@ const app = new Vue({
             correo: 'eden.verdugo@gmail.com',
             celular: '667 215 6054',
             cedulaProfesional: '7006956',
-            foto: 'asset/img/cage2.jpg',
+            foto: 'asset/img/yo.jpg',
             formacionAcademica: [{
                     nombre: 'Facultad de Informática UAS',
                     fechas: '2004-2008',
